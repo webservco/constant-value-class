@@ -20,5 +20,4 @@ class Example implements \WebServCo\ConstantValueClass\ConstantValueClassInterfa
     {
         return self::constant(self::IMPORT);
     }
-
 }
