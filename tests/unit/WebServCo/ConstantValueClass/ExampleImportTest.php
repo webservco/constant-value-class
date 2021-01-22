@@ -46,4 +46,28 @@ final class ExampleImportTest extends TestCase
             Example::import()->value() == 5
         );
     }
+
+    /**
+    * @test
+    */
+    public function assertImportToStringIsString() : void
+    {
+        $this->assertIsString((string) Example::import());
+    }
+
+    /**
+    * @test
+    */
+    public function assertImportToStringEquals() : void
+    {
+        $this->assertTrue('5' == (string) Example::import());
+    }
+
+    /**
+    * @test
+    */
+    public function assertImportToStringEqualsStrict() : void
+    {
+        $this->assertTrue('5' === (string) Example::import());
+    }
 }

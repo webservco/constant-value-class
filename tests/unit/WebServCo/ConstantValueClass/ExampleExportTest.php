@@ -46,4 +46,28 @@ final class ExampleExportTest extends TestCase
             Example::export()->value() == 1
         );
     }
+
+    /**
+    * @test
+    */
+    public function assertExportToStringIsString() : void
+    {
+        $this->assertIsString((string) Example::export());
+    }
+
+    /**
+    * @test
+    */
+    public function assertExportToStringEquals() : void
+    {
+        $this->assertTrue('1' == (string) Example::export());
+    }
+
+    /**
+    * @test
+    */
+    public function assertExportToStringEqualsStrict() : void
+    {
+        $this->assertTrue('1' === (string) Example::export());
+    }
 }
