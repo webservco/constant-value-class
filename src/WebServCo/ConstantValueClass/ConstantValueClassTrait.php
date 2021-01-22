@@ -14,6 +14,14 @@ trait ConstantValueClassTrait
     private $value;
 
     /**
+    * Return class instance constant value as string.
+    */
+    public function __toString() : string
+    {
+        return (string) $this->value;
+    }
+
+    /**
     * @param float|int|string $value
     * @return self
     */

@@ -29,8 +29,11 @@ $shipment->send(Type::import());
 $type = 2; // request parameter, user input, etc
 $shipment->send(Type::fromValue($type));
 
-// get value (eg. for form select)
+// get value (exact type) (eg. for form select)
 echo Type::import()->value(); // outputs "1"
+
+// get string representation of value
+echo Type::import(); // outputs "1"
 
 // comparison
 $import = Type::fromValue(2);
