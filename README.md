@@ -4,6 +4,8 @@ A Constant Value Class implementation.
 
 Based on the article ["Expressive, type-checked constants for PHP"](https://www.webfactory.de/blog/expressive-type-checked-constants-for-php).
 
+Note: Only `int` and `string` values are supported.
+
 ---
 
 ## Example

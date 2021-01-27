@@ -4,12 +4,12 @@ namespace WebServCo\ConstantValueClass;
 trait ConstantValueClassTrait
 {
     /**
-    * @var array<float|int|string,self>
+    * @var array<int|string,self>
     */
     private static array $instances = [];
 
     /**
-    * @var float|int|string
+    * @var int|string
     */
     private $value;
 
@@ -22,7 +22,7 @@ trait ConstantValueClassTrait
     }
 
     /**
-    * @param float|int|string $value
+    * @param int|string $value
     * @return self
     */
     public static function fromValue($value): self
@@ -38,7 +38,7 @@ trait ConstantValueClassTrait
     /**
     * Return class instance constant value.
     *
-    * @return float|int|string
+    * @return int|string
     */
     public function value()
     {
@@ -46,7 +46,7 @@ trait ConstantValueClassTrait
     }
 
     /**
-    *  @param float|int|string $value
+    *  @param int|string $value
     */
     final private function __construct($value)
     {
@@ -54,7 +54,7 @@ trait ConstantValueClassTrait
     }
 
     /**
-    * @param float|int|string $value
+    * @param int|string $value
     * @return self
     */
     private static function constant($value) : self
@@ -63,7 +63,7 @@ trait ConstantValueClassTrait
     }
 
     /**
-    * @return array<string,float|int|string>
+    * @return array<string,int|string>
     */
     private static function getConstants() : array
     {

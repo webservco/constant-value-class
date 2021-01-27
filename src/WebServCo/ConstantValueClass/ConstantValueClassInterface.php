@@ -14,7 +14,7 @@ interface ConstantValueClassInterface
     /**
     * Return class instance constant value.
     *
-    * @return float|int|string
+    * @return int|string
     */
     public function value();
 }
