@@ -8,7 +8,7 @@ final class ExampleExportTest extends TestCase
     /**
      * @test
      */
-    public function assertExportFromValueEquals() : void
+    public function assertExportFromValueEquals(): void
     {
         $instance = Example::fromValue(1);
         $this->assertTrue(
@@ -19,7 +19,7 @@ final class ExampleExportTest extends TestCase
     /**
      * @test
      */
-    public function assertExportFromValueEqualsStrict() : void
+    public function assertExportFromValueEqualsStrict(): void
     {
         $instance = Example::fromValue(1);
         $this->assertTrue(
@@ -30,7 +30,7 @@ final class ExampleExportTest extends TestCase
     /**
      * @test
      */
-    public function assertExportIsInstance() : void
+    public function assertExportIsInstance(): void
     {
         $this->assertTrue(
             Example::export() instanceof Example
@@ -40,7 +40,7 @@ final class ExampleExportTest extends TestCase
     /**
      * @test
      */
-    public function assertExportValueEquals() : void
+    public function assertExportValueEquals(): void
     {
         $this->assertTrue(
             Example::export()->value() == 1
@@ -50,7 +50,7 @@ final class ExampleExportTest extends TestCase
     /**
     * @test
     */
-    public function assertExportToStringIsString() : void
+    public function assertExportToStringIsString(): void
     {
         $this->assertIsString((string) Example::export());
     }
@@ -58,7 +58,7 @@ final class ExampleExportTest extends TestCase
     /**
     * @test
     */
-    public function assertExportToStringEquals() : void
+    public function assertExportToStringEquals(): void
     {
         $this->assertTrue('1' == (string) Example::export());
     }
@@ -66,7 +66,7 @@ final class ExampleExportTest extends TestCase
     /**
     * @test
     */
-    public function assertExportToStringEqualsStrict() : void
+    public function assertExportToStringEqualsStrict(): void
     {
         $this->assertTrue('1' === (string) Example::export());
     }

@@ -16,7 +16,7 @@ trait ConstantValueClassTrait
     /**
     * Return class instance constant value as string.
     */
-    public function __toString() : string
+    public function __toString(): string
     {
         return (string) $this->value;
     }
@@ -57,7 +57,7 @@ trait ConstantValueClassTrait
     * @param int|string $value
     * @return self
     */
-    private static function constant($value) : self
+    private static function constant($value): self
     {
         return self::$instances[$value] ?? self::$instances[$value] = new self($value);
     }
@@ -65,7 +65,7 @@ trait ConstantValueClassTrait
     /**
     * @return array<string,int|string>
     */
-    private static function getConstants() : array
+    private static function getConstants(): array
     {
         $reflection = new \ReflectionClass(__CLASS__);
         return $reflection->getConstants();

@@ -3,7 +3,7 @@ namespace WebServCo\ConstantValueClass;
 
 interface ConstantValueClassInterface
 {
-    public function __toString() : string;
+    public function __toString(): string;
 
     /**
     * @param int|string $value

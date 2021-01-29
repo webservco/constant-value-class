@@ -8,7 +8,7 @@ final class ExampleImportTest extends TestCase
     /**
      * @test
      */
-    public function assertImportFromValueEquals() : void
+    public function assertImportFromValueEquals(): void
     {
         $instance = Example::fromValue(5);
         $this->assertTrue(
@@ -19,7 +19,7 @@ final class ExampleImportTest extends TestCase
     /**
      * @test
      */
-    public function assertImportFromValueEqualsStrict() : void
+    public function assertImportFromValueEqualsStrict(): void
     {
         $instance = Example::fromValue(5);
         $this->assertTrue(
@@ -30,7 +30,7 @@ final class ExampleImportTest extends TestCase
     /**
      * @test
      */
-    public function assertImportIsInstance() : void
+    public function assertImportIsInstance(): void
     {
         $this->assertTrue(
             Example::import() instanceof Example
@@ -40,7 +40,7 @@ final class ExampleImportTest extends TestCase
     /**
      * @test
      */
-    public function assertImportValueEquals() : void
+    public function assertImportValueEquals(): void
     {
         $this->assertTrue(
             Example::import()->value() == 5
@@ -50,7 +50,7 @@ final class ExampleImportTest extends TestCase
     /**
     * @test
     */
-    public function assertImportToStringIsString() : void
+    public function assertImportToStringIsString(): void
     {
         $this->assertIsString((string) Example::import());
     }
@@ -58,7 +58,7 @@ final class ExampleImportTest extends TestCase
     /**
     * @test
     */
-    public function assertImportToStringEquals() : void
+    public function assertImportToStringEquals(): void
     {
         $this->assertTrue('5' == (string) Example::import());
     }
@@ -66,7 +66,7 @@ final class ExampleImportTest extends TestCase
     /**
     * @test
     */
-    public function assertImportToStringEqualsStrict() : void
+    public function assertImportToStringEqualsStrict(): void
     {
         $this->assertTrue('5' === (string) Example::import());
     }

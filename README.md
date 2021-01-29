@@ -19,7 +19,7 @@ Please see `tests/unit/WebServCo/ConstantValueClass/Example.php`
 ```php
 class Shipment
 {
-    public function send(Type $type) : bool
+    public function send(Type $type): bool
     {
         // ...
     }
