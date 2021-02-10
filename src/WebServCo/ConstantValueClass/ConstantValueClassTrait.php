@@ -5,10 +5,15 @@ namespace WebServCo\ConstantValueClass;
 trait ConstantValueClassTrait
 {
 
-    /** @var int|string */
+    /**
+    * Value.
+    *
+    * @var int|string */
     private $value;
 
     /**
+     * Instances.
+     *
      * @var array<int|string,self>
      */
     private static array $instances = [];
@@ -27,7 +32,7 @@ trait ConstantValueClassTrait
     public static function fromValue($value): self
     {
         $constants = self::getConstants();
-        if (!\in_array($value, $constants)) {
+        if (!\in_array($value, $constants, true)) {
             throw new \InvalidArgumentException(\sprintf('Invalid argument: "%s".', $value));
         }
 
