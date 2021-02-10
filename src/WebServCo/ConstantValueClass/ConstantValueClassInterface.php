@@ -4,11 +4,9 @@ namespace WebServCo\ConstantValueClass;
 
 interface ConstantValueClassInterface
 {
-    public function __toString(): string;
 
     /**
     * @param int|string $value
-    * @return self
     */
     public static function fromValue($value): self;
 
@@ -18,4 +16,6 @@ interface ConstantValueClassInterface
     * @return int|string
     */
     public function value();
+
+    public function __toString(): string;
 }

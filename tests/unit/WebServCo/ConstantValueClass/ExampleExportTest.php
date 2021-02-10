@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 final class ExampleExportTest extends TestCase
 {
+
     /**
      * @test
      */
@@ -13,7 +14,7 @@ final class ExampleExportTest extends TestCase
     {
         $instance = Example::fromValue(1);
         $this->assertTrue(
-            $instance == Example::export()
+            $instance === Example::export()
         );
     }
 
@@ -44,7 +45,7 @@ final class ExampleExportTest extends TestCase
     public function assertExportValueEquals(): void
     {
         $this->assertTrue(
-            Example::export()->value() == 1
+            1 === Example::export()->value()
         );
     }
 
@@ -61,7 +62,7 @@ final class ExampleExportTest extends TestCase
     */
     public function assertExportToStringEquals(): void
     {
-        $this->assertTrue('1' == (string) Example::export());
+        $this->assertTrue('1' === (string) Example::export());
     }
 
     /**

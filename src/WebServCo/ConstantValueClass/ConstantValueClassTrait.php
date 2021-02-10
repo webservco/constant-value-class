@@ -4,33 +4,31 @@ namespace WebServCo\ConstantValueClass;
 
 trait ConstantValueClassTrait
 {
-    /**
-    * @var array<int|string,self>
-    */
-    private static array $instances = [];
 
-    /**
-    * @var int|string
-    */
+    /** @var int|string */
     private $value;
 
     /**
-    * Return class instance constant value as string.
+     * @var array<int|string,self>
+     */
+    private static array $instances = [];
+
+    /**
+    * @param int|string $value
     */
-    public function __toString(): string
+    final private function __construct($value)
     {
-        return (string) $this->value;
+        $this->value = $value;
     }
 
     /**
     * @param int|string $value
-    * @return self
     */
     public static function fromValue($value): self
     {
         $constants = self::getConstants();
-        if (!in_array($value, $constants)) {
-            throw new \InvalidArgumentException(sprintf('Invalid argument: "%s".', $value));
+        if (!\in_array($value, $constants)) {
+            throw new \InvalidArgumentException(\sprintf('Invalid argument: "%s".', $value));
         }
 
         return self::constant($value);
@@ -47,16 +45,7 @@ trait ConstantValueClassTrait
     }
 
     /**
-    *  @param int|string $value
-    */
-    final private function __construct($value)
-    {
-        $this->value = $value;
-    }
-
-    /**
     * @param int|string $value
-    * @return self
     */
     private static function constant($value): self
     {
@@ -68,7 +57,15 @@ trait ConstantValueClassTrait
     */
     private static function getConstants(): array
     {
-        $reflection = new \ReflectionClass(__CLASS__);
+        $reflection = new \ReflectionClass(self::class);
         return $reflection->getConstants();
+    }
+
+    /**
+    * Return class instance constant value as string.
+    */
+    public function __toString(): string
+    {
+        return (string) $this->value;
     }
 }

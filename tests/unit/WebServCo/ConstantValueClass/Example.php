@@ -7,10 +7,11 @@ namespace Tests\ConstantValueClass;
 */
 class Example implements \WebServCo\ConstantValueClass\ConstantValueClassInterface
 {
-    private const EXPORT = 1;
-    private const IMPORT = 5;
 
     use \WebServCo\ConstantValueClass\ConstantValueClassTrait;
+
+    private const EXPORT = 1;
+    private const IMPORT = 5;
 
     public static function export(): self
     {
