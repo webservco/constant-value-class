@@ -1,4 +1,6 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types=1);
 
 namespace Tests\ConstantValueClass;
 
@@ -7,7 +9,6 @@ namespace Tests\ConstantValueClass;
 */
 class Example implements \WebServCo\ConstantValueClass\ConstantValueClassInterface
 {
-
     use \WebServCo\ConstantValueClass\ConstantValueClassTrait;
 
     private const EXPORT = 1;
