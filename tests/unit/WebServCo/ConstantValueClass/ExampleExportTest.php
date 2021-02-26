@@ -16,7 +16,7 @@ final class ExampleExportTest extends TestCase
     {
         $instance = Example::fromValue(1);
         $this->assertTrue(
-            $instance === Example::export()
+            $instance === Example::export(),
         );
     }
 
@@ -27,7 +27,7 @@ final class ExampleExportTest extends TestCase
     {
         $instance = Example::fromValue(1);
         $this->assertTrue(
-            $instance === Example::export()
+            $instance === Example::export(),
         );
     }
 
@@ -37,7 +37,7 @@ final class ExampleExportTest extends TestCase
     public function assertExportIsInstance(): void
     {
         $this->assertTrue(
-            Example::export() instanceof Example
+            Example::export() instanceof Example,
         );
     }
 
@@ -47,7 +47,7 @@ final class ExampleExportTest extends TestCase
     public function assertExportValueEquals(): void
     {
         $this->assertTrue(
-            1 === Example::export()->value()
+            1 === Example::export()->value(),
         );
     }
 

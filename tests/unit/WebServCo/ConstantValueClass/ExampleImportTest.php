@@ -16,7 +16,7 @@ final class ExampleImportTest extends TestCase
     {
         $instance = Example::fromValue(5);
         $this->assertTrue(
-            $instance === Example::import()
+            $instance === Example::import(),
         );
     }
 
@@ -27,7 +27,7 @@ final class ExampleImportTest extends TestCase
     {
         $instance = Example::fromValue(5);
         $this->assertTrue(
-            $instance === Example::import()
+            $instance === Example::import(),
         );
     }
 
@@ -37,7 +37,7 @@ final class ExampleImportTest extends TestCase
     public function assertImportIsInstance(): void
     {
         $this->assertTrue(
-            Example::import() instanceof Example
+            Example::import() instanceof Example,
         );
     }
 
@@ -47,7 +47,7 @@ final class ExampleImportTest extends TestCase
     public function assertImportValueEquals(): void
     {
         $this->assertTrue(
-            5 === Example::import()->value()
+            5 === Example::import()->value(),
         );
     }
 
