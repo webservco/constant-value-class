@@ -40,7 +40,7 @@ echo Type::import(); // outputs "1"
 // comparison
 $import = Type::fromValue(2);
 if (Type::import() === $import) {
-    // === works as long as the object is created in the current script run
+    // === works as long as the object is created in the current script run,
     // not for example created elsewhere and stored serialized in session.
 }
 ```
