@@ -6,7 +6,6 @@ namespace WebServCo\ConstantValueClass;
 
 interface ConstantValueClassInterface
 {
-
     /**
     * @param int|string $value
     */

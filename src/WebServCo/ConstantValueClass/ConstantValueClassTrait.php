@@ -6,7 +6,6 @@ namespace WebServCo\ConstantValueClass;
 
 trait ConstantValueClassTrait
 {
-
     /**
     * Value.
     *

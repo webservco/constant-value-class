@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 final class ExampleExportTest extends TestCase
 {
-
     /**
      * @test
      */
