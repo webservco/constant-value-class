@@ -1,6 +1,6 @@
 # webservco/constant-value-class
 
-A Constant Value Class implementation.
+A Constant Value Class implementation (enum simulation for PHP 7).
 
 Based on the article ["Expressive, type-checked constants for PHP"](https://www.webfactory.de/blog/expressive-type-checked-constants-for-php).
 
