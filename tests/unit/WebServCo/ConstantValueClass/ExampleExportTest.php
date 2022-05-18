@@ -32,6 +32,9 @@ final class ExampleExportTest extends TestCase
 
     /**
      * @test
+     * @suppress PhanRedundantCondition
+     * PHAN "Redundant attempt to cast Example::export() of type \Tests\ConstantValueClass\Example
+     * to \Tests\ConstantValueClass\Example"
      */
     public function assertExportIsInstance(): void
     {

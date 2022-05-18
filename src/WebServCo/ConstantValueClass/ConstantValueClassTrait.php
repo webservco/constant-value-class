@@ -4,12 +4,22 @@ declare(strict_types=1);
 
 namespace WebServCo\ConstantValueClass;
 
+/**
+* Trait to be used by all implementing code.
+*
+* @suppress PhanStaticPropIsStaticType
+* PHAN PhanStaticPropIsStaticType "Static property \WebServCo\ConstantValueClass\ConstantValueClassTrait::$instances
+* is declared to have type self[], but the only instance is shared among all subclasses
+* (Did you mean \WebServCo\ConstantValueClass\ConstantValueClassTrait[])"
+* No, it should be `self` as it's a trait and will be used to store implementing code instances.
+*/
 trait ConstantValueClassTrait
 {
     /**
     * Value.
     *
-    * @var int|string */
+    * @var int|string
+    */
     private $value;
 
     /**
@@ -20,6 +30,12 @@ trait ConstantValueClassTrait
     private static array $instances = [];
 
     /**
+    * Constructor is final and private
+    *
+    * @suppress PhanPrivateFinalMethod
+    * PHAN PhanPrivateFinalMethod "PHP warns about private method
+    * \WebServCo\ConstantValueClass\ConstantValueClassTrait::__construct() being final starting in php 8.0"
+    * This should not be the case for __construct), besides this is a trait so valid to say final + private
     * @param int|string $value
     */
     final private function __construct($value)
@@ -51,6 +67,12 @@ trait ConstantValueClassTrait
     }
 
     /**
+    * Method called by the custom methods in implementing classes.
+    *
+    * @suppress PhanTypeInstantiateTraitStaticOrSelf
+    * PHAN PhanTypeInstantiateTraitStaticOrSelf "Potential instantiation of trait
+    * \WebServCo\ConstantValueClass\ConstantValueClassTrait
+    * (not an issue if this method is only called from a non-abstract class using the trait)"
     * @param int|string $value
     */
     private static function constant($value): self
