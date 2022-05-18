@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Changelog.
 - Implement `phan`
+- Implement `phpmd`
 
 ### Changed
 - Interface fromValue return interface instead of self.
