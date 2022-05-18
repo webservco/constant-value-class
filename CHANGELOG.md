@@ -6,13 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-
 - Changelog
+
+### Changed
+- Simplify coding standard rules, use only PSR12.
 
 ## [1.3.4] - 2022-03-29
 
 ### Changed
-
 - Code style fixes
 
 ## [1.3.3] - 2021-05-24
@@ -24,42 +25,35 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.3.2] - 2021-02-26
 
 ### Changed
-
 - Code style fixes
 
 ## [1.3.1] - 2021-02-20
 
 ### Changed
-
 - Code style fixes
 - PHPStan strict rules
 
 ## [1.3.0] - 2021-02-10
 
 ### Changed
-
 - Code style fixes
 
 ## [1.2.0] - 2021-01-29
 
 ### Changed
-
 - Code style fixes
 
 ## [1.1.1] - 2021-01-27
 
 ### Changed
-
 - Only int and string values are supported.
 
 ## [1.1.0] - 2021-01-22
 
 ### Added
-
 - `__toString`
 
 ### Removed
-
 - Unsupported PHP versions.
 
 ## [1.0.0] - 2021-01-21
