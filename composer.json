@@ -26,7 +26,8 @@
         "slevomat/coding-standard": "^6.4",
         "squizlabs/php_codesniffer" : "^3.5",
         "phan/phan": "^5.3",
-        "phpmd/phpmd": "^2.12"
+        "phpmd/phpmd": "^2.12",
+        "vimeo/psalm": "^4.23"
     },
     "suggest" : {
         "phpdocumentor/phpdocumentor": "phpDocumentor v3 (global installation)"
@@ -38,7 +39,7 @@
         }
     },
     "scripts" : {
-        "all": "composer lint && composer check && composer s:8 && composer phan && composer phpmd && composer test",
+        "all": "composer lint && composer check && composer s:8 && composer phan && composer phpmd && composer psalm && composer test",
         "check" : "vendor/bin/phpcs --standard=php-coding-standard.xml --extensions=php -sp src tests",
         "check:structure" : "vendor/bin/pds-skeleton validate .",
         "doc" : [
@@ -48,6 +49,7 @@
         "lint": "vendor/bin/parallel-lint src tests",
         "phan": "vendor/bin/phan",
         "phpmd": "vendor/bin/phpmd src xml phpmd-rulesets.xml",
+        "psalm": "vendor/bin/psalm --no-diff",
         "s:8": "vendor/bin/phpstan analyse src tests --level=8 --ansi -c phpstan.neon",
         "s:strict": "clear && vendor/bin/phpstan analyse src --level=8 --ansi -c phpstan-strict.neon",
         "test" : "vendor/bin/phpunit --colors=always",
