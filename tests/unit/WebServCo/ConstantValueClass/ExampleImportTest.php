@@ -49,7 +49,7 @@ final class ExampleImportTest extends TestCase
     public function assertImportValueEquals(): void
     {
         $this->assertTrue(
-            5 === Example::import()->value(),
+            Example::import()->value() === 5,
         );
     }
 
@@ -66,7 +66,7 @@ final class ExampleImportTest extends TestCase
     */
     public function assertImportToStringEquals(): void
     {
-        $this->assertTrue('5' === (string) Example::import());
+        $this->assertTrue((string) Example::import() === '5');
     }
 
     /**
@@ -74,6 +74,6 @@ final class ExampleImportTest extends TestCase
     */
     public function assertImportToStringEqualsStrict(): void
     {
-        $this->assertTrue('5' === (string) Example::import());
+        $this->assertTrue((string) Example::import() === '5');
     }
 }
