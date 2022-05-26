@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Changelog.
+- Code style fixes.
 - Implement `phan`
 - Implement `phpmd`
 - Implement `psalm`
