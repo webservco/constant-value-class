@@ -32,11 +32,11 @@ trait ConstantValueClassTrait
     /**
     * Constructor is final and private
     *
+    * @param int|string $value
     * @suppress PhanPrivateFinalMethod
     * PHAN PhanPrivateFinalMethod "PHP warns about private method
     * \WebServCo\ConstantValueClass\ConstantValueClassTrait::__construct() being final starting in php 8.0"
     * This should not be the case for __construct), besides this is a trait so valid to say final + private
-    * @param int|string $value
     */
     final private function __construct($value)
     {
