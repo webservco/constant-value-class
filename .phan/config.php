@@ -350,13 +350,13 @@ return [
     'directory_list' => [
         'src/WebServCo',
         'tests/unit/WebServCo',
-        'vendor/pds/skeleton/src',
-        'vendor/phan/phan/src/Phan',
-        'vendor/php-parallel-lint/php-console-highlighter/src',
-        'vendor/php-parallel-lint/php-parallel-lint/./src',
-        'vendor/phpstan/phpstan-strict-rules/src',
-        'vendor/phpunit/phpunit/src',
-        'vendor/slevomat/coding-standard/SlevomatCodingStandard',
+        //'vendor/pds/skeleton/src',
+        //'vendor/phan/phan/src/Phan',
+        //'vendor/php-parallel-lint/php-console-highlighter/src',
+        //'vendor/php-parallel-lint/php-parallel-lint/./src',
+        //'vendor/phpstan/phpstan-strict-rules/src',
+        //'vendor/phpunit/phpunit/src',
+        //'vendor/slevomat/coding-standard/SlevomatCodingStandard',
     ],
 
     // A list of individual files to include in analysis
