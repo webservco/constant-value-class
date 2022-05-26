@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2022-05-26
+
 ### Added
 - Changelog.
 - Code style fixes.
@@ -63,7 +65,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.0] - 2021-01-21
 
-[Unreleased]: https://github.com/webservco/constant-value-class/compare/v1.3.4...HEAD
+[Unreleased]: https://github.com/webservco/constant-value-class/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/webservco/constant-value-class/compare/v1.3.4...v1.4.0
 [1.3.4]: https://github.com/webservco/constant-value-class/compare/v1.3.3...v1.3.4
 [1.3.3]: https://github.com/webservco/constant-value-class/compare/v1.3.2...v1.3.3
 [1.3.2]: https://github.com/webservco/constant-value-class/compare/v1.3.1...v1.3.2
