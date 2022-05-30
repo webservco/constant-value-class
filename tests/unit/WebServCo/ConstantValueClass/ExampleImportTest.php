@@ -6,6 +6,9 @@ namespace Tests\ConstantValueClass;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+* @covers \WebServCo\ConstantValueClass\ConstantValueClassTrait
+*/
 final class ExampleImportTest extends TestCase
 {
     /**
