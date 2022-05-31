@@ -14,23 +14,10 @@ final class ExampleImportTest extends TestCase
     /**
      * @test
      */
-    public function assertImportFromValueEquals(): void
+    public function assertImportFromValueSame(): void
     {
         $instance = Example::fromValue(5);
-        $this->assertTrue(
-            $instance === Example::import(),
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function assertImportFromValueEqualsStrict(): void
-    {
-        $instance = Example::fromValue(5);
-        $this->assertTrue(
-            $instance === Example::import(),
-        );
+        $this->assertSame($instance, Example::import());
     }
 
     /**
@@ -51,9 +38,7 @@ final class ExampleImportTest extends TestCase
      */
     public function assertImportValueEquals(): void
     {
-        $this->assertTrue(
-            Example::import()->value() === 5,
-        );
+        $this->assertSame(5, Example::import()->value());
     }
 
     /**
@@ -69,14 +54,6 @@ final class ExampleImportTest extends TestCase
     */
     public function assertImportToStringEquals(): void
     {
-        $this->assertTrue((string) Example::import() === '5');
-    }
-
-    /**
-    * @test
-    */
-    public function assertImportToStringEqualsStrict(): void
-    {
-        $this->assertTrue((string) Example::import() === '5');
+        $this->assertSame('5', (string) Example::import());
     }
 }

@@ -14,23 +14,10 @@ final class ExampleExportTest extends TestCase
     /**
      * @test
      */
-    public function assertExportFromValueEquals(): void
+    public function assertExportFromValueSame(): void
     {
         $instance = Example::fromValue(1);
-        $this->assertTrue(
-            $instance === Example::export(),
-        );
-    }
-
-    /**
-     * @test
-     */
-    public function assertExportFromValueEqualsStrict(): void
-    {
-        $instance = Example::fromValue(1);
-        $this->assertTrue(
-            $instance === Example::export(),
-        );
+        $this->assertSame($instance, Example::export());
     }
 
     /**
@@ -51,9 +38,7 @@ final class ExampleExportTest extends TestCase
      */
     public function assertExportValueEquals(): void
     {
-        $this->assertTrue(
-            Example::export()->value() === 1,
-        );
+        $this->assertSame(1, Example::export()->value());
     }
 
     /**
@@ -69,14 +54,6 @@ final class ExampleExportTest extends TestCase
     */
     public function assertExportToStringEquals(): void
     {
-        $this->assertTrue((string) Example::export() === '1');
-    }
-
-    /**
-    * @test
-    */
-    public function assertExportToStringEqualsStrict(): void
-    {
-        $this->assertTrue((string) Example::export() === '1');
+        $this->assertSame('1', (string) Example::export());
     }
 }
