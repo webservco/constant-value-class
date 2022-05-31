@@ -48,6 +48,9 @@ trait ConstantValueClassTrait
     */
     public static function fromValue($value): self
     {
+        // Sonarqube code smell: "Make sure that this accessibility bypass is safe here."
+        // No other way to solve "check if a class constant exists by knowing it's value and not it's name".
+        // "An array of constants, where the keys hold the name and the values the value of the constants".
         $constants = self::getConstants();
         if (!\in_array($value, $constants, true)) {
             throw new \InvalidArgumentException(\sprintf('Invalid argument: "%s".', $value));
