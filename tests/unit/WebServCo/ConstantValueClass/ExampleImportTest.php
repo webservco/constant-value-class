@@ -11,49 +11,24 @@ use PHPUnit\Framework\TestCase;
 */
 final class ExampleImportTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function assertImportFromValueSame(): void
+    public function testAssertImportFromValueSame(): void
     {
         $instance = Example::fromValue(5);
-        $this->assertSame($instance, Example::import());
+        self::assertSame($instance, Example::import());
     }
 
-    /**
-     * @test
-     * @suppress PhanRedundantCondition
-     * PHAN "Redundant attempt to cast Example::export() of type \Tests\ConstantValueClass\Example
-     * to \Tests\ConstantValueClass\Example"
-     */
-    public function assertImportIsInstance(): void
+    public function testImportValueEquals(): void
     {
-        $this->assertTrue(
-            Example::import() instanceof Example,
-        );
+        self::assertSame(5, Example::import()->value());
     }
 
-    /**
-     * @test
-     */
-    public function assertImportValueEquals(): void
+    public function testAssertImportToStringIsString(): void
     {
-        $this->assertSame(5, Example::import()->value());
+        self::assertIsString((string) Example::import());
     }
 
-    /**
-    * @test
-    */
-    public function assertImportToStringIsString(): void
+    public function testAssertImportToStringEquals(): void
     {
-        $this->assertIsString((string) Example::import());
-    }
-
-    /**
-    * @test
-    */
-    public function assertImportToStringEquals(): void
-    {
-        $this->assertSame('5', (string) Example::import());
+        self::assertSame('5', (string) Example::import());
     }
 }

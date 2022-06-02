@@ -11,49 +11,24 @@ use PHPUnit\Framework\TestCase;
 */
 final class ExampleExportTest extends TestCase
 {
-    /**
-     * @test
-     */
-    public function assertExportFromValueSame(): void
+    public function testAssertExportFromValueSame(): void
     {
         $instance = Example::fromValue(1);
-        $this->assertSame($instance, Example::export());
+        self::assertSame($instance, Example::export());
     }
 
-    /**
-     * @test
-     * @suppress PhanRedundantCondition
-     * PHAN "Redundant attempt to cast Example::export() of type \Tests\ConstantValueClass\Example
-     * to \Tests\ConstantValueClass\Example"
-     */
-    public function assertExportIsInstance(): void
+    public function testAssertExportValueEquals(): void
     {
-        $this->assertTrue(
-            Example::export() instanceof Example,
-        );
+        self::assertSame(1, Example::export()->value());
     }
 
-    /**
-     * @test
-     */
-    public function assertExportValueEquals(): void
+    public function testAssertExportToStringIsString(): void
     {
-        $this->assertSame(1, Example::export()->value());
+        self::assertIsString((string) Example::export());
     }
 
-    /**
-    * @test
-    */
-    public function assertExportToStringIsString(): void
+    public function testAssertExportToStringEquals(): void
     {
-        $this->assertIsString((string) Example::export());
-    }
-
-    /**
-    * @test
-    */
-    public function assertExportToStringEquals(): void
-    {
-        $this->assertSame('1', (string) Example::export());
+        self::assertSame('1', (string) Example::export());
     }
 }

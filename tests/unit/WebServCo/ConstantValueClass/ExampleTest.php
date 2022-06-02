@@ -11,10 +11,7 @@ use PHPUnit\Framework\TestCase;
 */
 final class ExampleTest extends TestCase
 {
-    /**
-    * @test
-    */
-    public function assertInvalidFromValueThrowsException(): void
+    public function testAssertInvalidFromValueThrowsException(): void
     {
         $this->expectException(\InvalidArgumentException::class);
 
