@@ -89,7 +89,15 @@ trait ConstantValueClassTrait
     private static function getConstants(): array
     {
         $reflection = new \ReflectionClass(self::class);
-        return $reflection->getConstants();
+        $constants = $reflection->getConstants();
+        $filteredConstants = [];
+        foreach ($constants as $key => $value) {
+            if (!\is_string($value) && !\is_int($value)) {
+                continue;
+            }
+            $filteredConstants[$key] = $value;
+        }
+        return $filteredConstants;
     }
 
     /**
