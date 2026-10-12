@@ -1,7 +1,7 @@
 {
     "name" : "webservco/constant-value-class",
     "type" : "library",
-    "description" : "A Constant Value Class implementation",
+    "description" : "A PHP library. Type-checked constants for PHP 7: a class whose only instances are its own constant values, so it can stand in for an enum.",
     "keywords" : [
         "webservco"
     ],
